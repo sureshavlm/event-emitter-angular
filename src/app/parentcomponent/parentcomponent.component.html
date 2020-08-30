@@ -1,0 +1,14 @@
+
+<div style="height: 450px; width: 450px; border: 1px solid red">
+	<h1>
+	  Parent Component
+	</h1>
+	<ul>
+		<li *ngFor="let product of products">{{product.name}}</li>
+	</ul>
+	<p>Counter in Parent componnent: {{counter}}</p>
+	<button (click)="incrementInParent()">Increment</button>
+
+	<app-childcomponent (counterchange)="counterChangeEventHandler($event)" [counter]="counter"></app-childcomponent>
+
+</div>
